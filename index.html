@@ -89,7 +89,12 @@
         .contract-chain {
             display: flex;
             justify-content: center;
+            align-items: center;
             margin: 20px 0;
+        }
+        .contract-label {
+            font-weight: bold;
+            margin-right: 10px;
         }
         .contract-address {
             background-color: rgba(255, 255, 255, 0.1);
@@ -98,13 +103,13 @@
             border-radius: 20px;
             font-weight: bold;
             cursor: pointer;
-            margin-right: 20px;
         }
         .chain-tag {
             background-color: #4dcd4d;
             color: #0a1a0a;
             padding: 10px 20px;
             border-radius: 20px;
+            margin-left: 20px;
         }
 
         /* Features Section */
@@ -151,26 +156,11 @@
             color: #4dcd4d;
             margin-bottom: 20px;
         }
-        .roadmap-phases {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .roadmap-phase {
-            background-color: rgba(29, 100, 29, 0.3);
-            border-radius: 10px;
-            padding: 20px;
-            flex: 0 1 30%;
-        }
-        .phase-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #4dcd4d;
-            margin-bottom: 10px;
-        }
-        .phase-description {
+        .roadmap-content {
+            font-size: 1rem;
             color: #e0e0e0;
+            line-height: 1.8;
+            margin-bottom: 20px;
         }
 
         /* Footer */
@@ -201,8 +191,9 @@
 
     <!-- Contract Section -->
     <div class="contract-chain">
+        <span class="contract-label">CA:</span>
         <div class="contract-address" onclick="copyToClipboard(this)">
-            CA: D4a6XgKJgru96LcUXU3BtNv8xMa3FbShbi1jDpAqpump
+            D4a6XgKJgru96LcUXU3BtNv8xMa3FbShbi1jDpAqpump
         </div>
         <div class="chain-tag">Solana Chain</div>
     </div>
@@ -211,38 +202,27 @@
     <section class="features">
         <div class="feature-card">
             <div class="feature-icon">🚗</div>
-            <h2 class="feature-title">Cannabis Commerce</h2>
-            <p class="feature-description">Pioneering a decentralized marketplace for cannabis enthusiasts and merchants.</p>
+            <h2 class="feature-title">Organic Growth</h2>
+            <p class="feature-description">No marketing needed, just pure community-driven growth.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🌿</div>
+            <h2 class="feature-title">Chill Payments</h2>
+            <p class="feature-description">Enjoy your moments and pay seamlessly with CBONG tokens.</p>
         </div>
         <div class="feature-card">
             <div class="feature-icon">👥</div>
-            <h2 class="feature-title">Community Empowerment</h2>
-            <p class="feature-description">Building a global network of cannabis and crypto enthusiasts.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">💸</div>
-            <h2 class="feature-title">Rewards</h2>
-            <p class="feature-description">Stake your CARBONG and earn exclusive cannabis-themed NFTs and rewards.</p>
+            <h2 class="feature-title">Stronger Community</h2>
+            <p class="feature-description">Empowering users to define the future of CARBONG together.</p>
         </div>
     </section>
 
     <!-- Roadmap Section -->
     <section class="roadmap">
-        <h2 class="roadmap-title">Roadmap</h2>
-        <div class="roadmap-phases">
-            <div class="roadmap-phase">
-                <h3 class="phase-title">Phase 1</h3>
-                <p class="phase-description">Token Launch and Community Building.</p>
-            </div>
-            <div class="roadmap-phase">
-                <h3 class="phase-title">Phase 2</h3>
-                <p class="phase-description">Cannabis NFT Marketplace and Partnerships.</p>
-            </div>
-            <div class="roadmap-phase">
-                <h3 class="phase-title">Phase 3</h3>
-                <p class="phase-description">CARBONG Staking and Rewards System Launch.</p>
-            </div>
-        </div>
+        <h2 class="roadmap-title">Our Vision</h2>
+        <p class="roadmap-content">
+            At CARBONG, we believe in the power of community to shape the future. Our roadmap is focused on creating a collaborative environment where every voice matters. Together, we will build a decentralized platform that reflects the shared goals and aspirations of our members. From building community strength to setting the course for the next big thing, your input drives us forward.
+        </p>
     </section>
 
     <!-- Footer -->
