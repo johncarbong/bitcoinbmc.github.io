@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CARBONG - Cannabis Crypto Revolution</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         * {
             margin: 0;
             padding: 0;
@@ -13,7 +14,7 @@
         }
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0a1a0a 0%, #121212 100%);
+            background: linear-gradient(135deg, #0a1a0a, #121212);
             color: #e0e0e0;
             line-height: 1.6;
         }
@@ -23,7 +24,7 @@
             padding: 20px;
         }
 
-        /* Header Section */
+        /* Header Styles */
         .header-tags {
             display: flex;
             justify-content: space-between;
@@ -35,7 +36,6 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            backdrop-filter: blur(10px);
         }
         .social-link {
             text-decoration: none;
@@ -58,248 +58,196 @@
             background-color: #333;
         }
 
-        /* Header Logo and Title */
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-top: 100px;
+        }
         .header-logo {
-            background: linear-gradient(135deg, #4dcd4d 0%, #1ea01e 100%);
+            background: linear-gradient(135deg, #4dcd4d, #1ea01e);
             border-radius: 50%;
             width: 120px;
             height: 120px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 2rem auto 1rem;
+            margin: 0 auto 20px;
             box-shadow: 0 10px 25px rgba(77, 205, 77, 0.3);
-            transition: transform 0.3s ease;
-        }
-        .header-logo:hover {
-            transform: scale(1.05);
         }
         .title {
-            color: #4dcd4d;
-            text-align: center;
             font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            text-shadow: 0 4px 6px rgba(77, 205, 77, 0.2);
+            font-weight: bold;
+            color: #4dcd4d;
         }
         .subtitle {
-            color: #7ddc7d;
-            text-align: center;
             font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            font-weight: 300;
+            color: #7ddc7d;
+            margin-top: 10px;
         }
 
-        /* Contract and Chain Info */
+        /* Contract Section */
         .contract-chain {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 1rem 0;
+            justify-content: center;
+            margin: 20px 0;
         }
         .contract-address {
             background-color: rgba(255, 255, 255, 0.1);
             color: #4dcd4d;
             padding: 10px 20px;
             border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
+            font-weight: bold;
             cursor: pointer;
-            border: 1px solid rgba(77, 205, 77, 0.3);
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-            max-width: 250px;
-            transition: background-color 0.3s ease;
-        }
-        .contract-address:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+            margin-right: 20px;
         }
         .chain-tag {
             background-color: #4dcd4d;
             color: #0a1a0a;
             padding: 10px 20px;
             border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
         }
 
         /* Features Section */
         .features {
             display: flex;
-            justify-content: space-between;
-            margin: 3rem 0;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
         }
         .feature-card {
             background-color: rgba(11, 61, 11, 0.5);
             border: 2px solid #4dcd4d;
             border-radius: 15px;
-            padding: 1.5rem;
-            width: 30%;
+            padding: 20px;
+            flex: 0 1 30%;
             text-align: center;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(77, 205, 77, 0.2);
         }
         .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
         .feature-title {
+            font-size: 1.5rem;
+            font-weight: bold;
             color: #4dcd4d;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+            margin-bottom: 10px;
         }
         .feature-description {
-            color: #7ddc7d;
-            font-weight: 300;
+            color: #e0e0e0;
         }
 
         /* Roadmap Section */
         .roadmap {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px;
             background-color: rgba(11, 61, 11, 0.5);
             border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 3rem;
-            backdrop-filter: blur(10px);
         }
         .roadmap-title {
-            color: #4dcd4d;
-            text-align: center;
-            margin-bottom: 2rem;
             font-size: 2rem;
-            font-weight: 700;
+            font-weight: bold;
+            color: #4dcd4d;
+            margin-bottom: 20px;
         }
         .roadmap-phases {
             display: flex;
-            justify-content: space-between;
-            gap: 15px;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
         }
         .roadmap-phase {
-            flex: 1;
             background-color: rgba(29, 100, 29, 0.3);
             border-radius: 10px;
-            padding: 1.5rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        .roadmap-phase:hover {
-            transform: scale(1.05);
-            background-color: rgba(29, 100, 29, 0.5);
+            padding: 20px;
+            flex: 0 1 30%;
         }
         .phase-title {
-            color: #4dcd4d;
-            margin-bottom: 1rem;
             font-size: 1.2rem;
-            font-weight: 600;
+            font-weight: bold;
+            color: #4dcd4d;
+            margin-bottom: 10px;
         }
         .phase-description {
-            color: #7ddc7d;
-            font-size: 0.9rem;
-            font-weight: 300;
+            color: #e0e0e0;
         }
 
         /* Footer */
         .footer {
             text-align: center;
+            margin-top: 40px;
             padding: 20px;
-            background-color: rgba(11, 61, 11, 0.3);
-            margin-top: 20px;
-        }
-        .creator-credit {
-            color: #7ddc7d;
-        }
-        .creator-name {
-            color: #4dcd4d;
-            font-weight: bold;
+            background-color: rgba(11, 61, 11, 0.5);
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header -->
     <div class="header-tags">
         <a href="https://t.co/GtQz41dPsj" class="social-link telegram">Telegram Group</a>
         <a href="https://x.com/johncarbong" class="social-link official-x">Official X</a>
     </div>
 
-    <!-- Main Content -->
-    <div class="container">
-        <div style="text-align: center; margin-top: 80px;">
-            <div class="header-logo">
-                <span style="font-size: 3rem;">🌿</span>
-            </div>
-            <h1 class="title">CARBONG</h1>
-            <p class="subtitle">
-                The Ultimate Cannabis Culture Crypto - Bridging Blockchain and Green Lifestyle
-            </p>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="header-logo">
+            <span style="font-size: 3rem;">🌿</span>
         </div>
-
-        <!-- Contract Info -->
-        <div class="contract-chain">
-            <div class="contract-address" onclick="copyToClipboard(this)">
-                CA: D4a6XgKJgru96LcUXU3BtNv8xMa3FbShbi1jDpAqpump
-            </div>
-            <div class="chain-tag">Solana Chain</div>
-        </div>
-
-        <!-- Features Section -->
-        <section class="features">
-            <div class="feature-card">
-                <div class="feature-icon">🚗</div>
-                <h2 class="feature-title">Cannabis Commerce</h2>
-                <p class="feature-description">
-                    Pioneering a decentralized marketplace for cannabis enthusiasts and merchants.
-                </p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">👥</div>
-                <h2 class="feature-title">Community Empowerment</h2>
-                <p class="feature-description">
-                    Building a global network of cannabis and crypto enthusiasts.
-                </p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">💸</div>
-                <h2 class="feature-title">Rewards</h2>
-                <p class="feature-description">
-                    Stake your CARBONG and earn exclusive cannabis-themed NFTs and rewards.
-                </p>
-            </div>
-        </section>
-
-        <!-- Roadmap Section -->
-        <section class="roadmap">
-            <h2 class="roadmap-title">Roadmap</h2>
-            <div class="roadmap-phases">
-                <div class="roadmap-phase">
-                    <h3 class="phase-title">Phase 1</h3>
-                    <p class="phase-description">
-                        Token Launch and Community Building.
-                    </p>
-                </div>
-                <div class="roadmap-phase">
-                    <h3 class="phase-title">Phase 2</h3>
-                    <p class="phase-description">
-                        Cannabis NFT Marketplace and Partnerships.
-                    </p>
-                </div>
-                <div class="roadmap-phase">
-                    <h3 class="phase-title">Phase 3</h3>
-                    <p class="phase-description">
-                        CARBONG Staking and Rewards System Launch.
-                    </p>
-                </div>
-            </div>
-        </section>
+        <h1 class="title">CARBONG</h1>
+        <p class="subtitle">The Ultimate Cannabis Culture Crypto - Bridging Blockchain and Green Lifestyle</p>
     </div>
+
+    <!-- Contract Section -->
+    <div class="contract-chain">
+        <div class="contract-address" onclick="copyToClipboard(this)">
+            CA: D4a6XgKJgru96LcUXU3BtNv8xMa3FbShbi1jDpAqpump
+        </div>
+        <div class="chain-tag">Solana Chain</div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-icon">🚗</div>
+            <h2 class="feature-title">Cannabis Commerce</h2>
+            <p class="feature-description">Pioneering a decentralized marketplace for cannabis enthusiasts and merchants.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">👥</div>
+            <h2 class="feature-title">Community Empowerment</h2>
+            <p class="feature-description">Building a global network of cannabis and crypto enthusiasts.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💸</div>
+            <h2 class="feature-title">Rewards</h2>
+            <p class="feature-description">Stake your CARBONG and earn exclusive cannabis-themed NFTs and rewards.</p>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section class="roadmap">
+        <h2 class="roadmap-title">Roadmap</h2>
+        <div class="roadmap-phases">
+            <div class="roadmap-phase">
+                <h3 class="phase-title">Phase 1</h3>
+                <p class="phase-description">Token Launch and Community Building.</p>
+            </div>
+            <div class="roadmap-phase">
+                <h3 class="phase-title">Phase 2</h3>
+                <p class="phase-description">Cannabis NFT Marketplace and Partnerships.</p>
+            </div>
+            <div class="roadmap-phase">
+                <h3 class="phase-title">Phase 3</h3>
+                <p class="phase-description">CARBONG Staking and Rewards System Launch.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p class="creator-credit">Created by <span class="creator-name">John Carbong</span></p>
+        <p>Created by John Carbong</p>
     </footer>
 
     <script>
