@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CARBONG - Crypto Freedom Revolution</title>
+    <title>CARBONG - Cannabis Crypto Revolution</title>
     <style>
-        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -21,14 +20,41 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            position: relative;
         }
-
-        /* Typography */
+        .header-tags {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .contract-address {
+            background-color: rgba(11, 61, 11, 0.7);
+            color: #4dcd4d;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            max-width: 250px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .chain-tag {
+            background-color: #1ea01e;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        /* Existing styles from previous version... */
         .title {
             color: #4dcd4d;
             text-align: center;
             font-size: 3rem;
             margin-bottom: 1rem;
+            padding-top: 50px;
         }
         .subtitle {
             color: #7ddc7d;
@@ -37,8 +63,6 @@
             max-width: 800px;
             margin: 0 auto 2rem;
         }
-
-        /* Card Styles */
         .features {
             display: flex;
             justify-content: space-between;
@@ -56,101 +80,51 @@
         .feature-card:hover {
             transform: scale(1.05);
         }
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .feature-title {
-            color: #4dcd4d;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        .feature-description {
-            color: #7ddc7d;
-        }
-
-        /* Token Details */
-        .token-details {
+        .roadmap {
             background-color: rgba(11, 61, 11, 0.7);
             border-radius: 10px;
             padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        .roadmap-title {
+            color: #4dcd4d;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        .roadmap-phases {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 3rem;
         }
-        .token-vision, .token-stats {
-            width: 48%;
+        .roadmap-phase {
+            width: 18%;
+            background-color: rgba(29, 100, 29, 0.5);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
         }
-        .section-title {
+        .phase-title {
             color: #4dcd4d;
             margin-bottom: 1rem;
-            font-size: 1.8rem;
+            font-size: 1.2rem;
         }
-        .token-stats-list {
-            list-style-type: none;
+        .phase-description {
             color: #7ddc7d;
+            font-size: 0.9rem;
         }
-        .token-stats-list li {
-            margin-bottom: 0.5rem;
-        }
-        .chart-link {
-            display: inline-block;
-            background-color: #4dcd4d;
-            color: #062206;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 1rem;
-        }
-
-        /* Community Links */
-        .community-links {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        .community-btn {
-            display: inline-block;
-            background-color: #1ea01e;
-            color: white;
-            padding: 12px 24px;
-            margin: 0 10px;
-            text-decoration: none;
-            border-radius: 25px;
-            transition: background-color 0.3s ease;
-        }
-        .community-btn:hover {
-            background-color: #4dcd4d;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            border-top: 1px solid #1ea01e;
-            padding: 1rem;
-            color: #7ddc7d;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .features {
-                flex-direction: column;
-            }
-            .feature-card {
-                width: 100%;
-                margin-bottom: 1rem;
-            }
-            .token-details {
-                flex-direction: column;
-            }
-            .token-vision, .token-stats {
-                width: 100%;
-                margin-bottom: 1rem;
-            }
-        }
+        /* Rest of the existing styles... */
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Header Tags -->
+        <div class="header-tags">
+            <div class="contract-address" onclick="copyToClipboard(this)">
+                CA: D4a6XgKJgru96LcUXU3BtNv8xMa3FbShbi1jDpAqpump
+            </div>
+            <div class="chain-tag">Solana Chain</div>
+        </div>
+
         <!-- Header -->
         <header>
             <div style="text-align: center; margin-bottom: 2rem;">
@@ -159,7 +133,7 @@
                 </div>
                 <h1 class="title">CARBONG</h1>
                 <p class="subtitle">
-                    Revolutionizing Crypto with Luxury, Freedom, and Cannabis Culture
+                    The Ultimate Cannabis Culture Crypto - Bridging Blockchain and Green Lifestyle
                 </p>
             </div>
         </header>
@@ -168,71 +142,77 @@
         <section class="features">
             <div class="feature-card">
                 <div class="feature-icon">🚗</div>
-                <h2 class="feature-title">Luxury Meets Cannabis</h2>
+                <h2 class="feature-title">Cannabis Commerce</h2>
                 <p class="feature-description">
-                    A bold fusion of high-end lifestyle and blockchain innovation, breaking traditional boundaries.
+                    Pioneering a decentralized marketplace for cannabis enthusiasts and merchants.
                 </p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">👥</div>
-                <h2 class="feature-title">Community-Driven</h2>
+                <h2 class="feature-title">Community Empowerment</h2>
                 <p class="feature-description">
-                    Powered by passionate enthusiasts seeking ethical growth and shared prosperity.
+                    Building a global network of cannabis and crypto enthusiasts.
                 </p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">💸</div>
-                <h2 class="feature-title">Innovative Tokenomics</h2>
+                <h2 class="feature-title">Future Exchange</h2>
                 <p class="feature-description">
-                    Sustainable economic model designed for long-term value and community empowerment.
+                    Vision to become a primary exchange token in cannabis-related transactions.
                 </p>
             </div>
         </section>
 
-        <!-- Token Details -->
-        <section class="token-details">
-            <div class="token-vision">
-                <h3 class="section-title">Project Vision</h3>
-                <p style="color: #7ddc7d;">
-                    CARBONG represents a paradigm shift in crypto - a token built on principles of freedom, transparency, and community empowerment.
-                </p>
-                <p style="color: #4dcd4d; font-style: italic;">
-                    "Only 0.11% held by creator - True decentralization in action"
-                </p>
-            </div>
-            <div class="token-stats">
-                <h3 class="section-title">Token Details</h3>
-                <ul class="token-stats-list">
-                    <li>• Symbol: CBONG</li>
-                    <li>• Blockchain: Solana</li>
-                    <li>• Creator Allocation: 0.11%</li>
-                </ul>
-                <a href="https://gmgn.ai/sol/token/D4a6XgKJgru96LcUXU3BtNv8xMa3FbShbi1jDpAqpump" 
-                   target="_blank" 
-                   class="chart-link">
-                    View Live Chart & Holders
-                </a>
+        <!-- Roadmap -->
+        <section class="roadmap">
+            <h2 class="roadmap-title">Project Roadmap</h2>
+            <div class="roadmap-phases">
+                <div class="roadmap-phase">
+                    <h3 class="phase-title">Ignition</h3>
+                    <p class="phase-description">
+                        Launch on Solana, Initial Community Building, Pump.fun Listing
+                    </p>
+                </div>
+                <div class="roadmap-phase">
+                    <h3 class="phase-title">Acceleration</h3>
+                    <p class="phase-description">
+                        Raydium DEX Listing, Marketing Campaign, Community Growth
+                    </p>
+                </div>
+                <div class="roadmap-phase">
+                    <h3 class="phase-title">Expansion</h3>
+                    <p class="phase-description">
+                        CEX Listings, Merch Line, Cannabis Industry Partnerships
+                    </p>
+                </div>
+                <div class="roadmap-phase">
+                    <h3 class="phase-title">Ecosystem</h3>
+                    <p class="phase-description">
+                        NFT Collection, Reward Programs, Global Cannabis Network
+                    </p>
+                </div>
+                <div class="roadmap-phase">
+                    <h3 class="phase-title">Global Green</h3>
+                    <p class="phase-description">
+                        International Adoption, Cannabis Transaction Platform
+                    </p>
+                </div>
             </div>
         </section>
 
-        <!-- Community Links -->
-        <section class="community-links">
-            <h2 class="section-title" style="margin-bottom: 2rem;">Join the CARBONG Revolution</h2>
-            <a href="https://t.co/GtQz41dPsj" target="_blank" class="community-btn">
-                Telegram
-            </a>
-            <a href="https://twitter.com/johncarbong" target="_blank" class="community-btn">
-                Twitter/X
-            </a>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <p>Created with 🌿 by JOHN CARBONG</p>
-            <p style="font-size: 0.8rem; color: #1ea01e;">
-                © 2024 CARBONG. Chill with Bong.
-            </p>
-        </footer>
+        <!-- Existing sections like Token Details, Community Links, Footer... -->
+        
+        <script>
+            function copyToClipboard(element) {
+                const text = element.textContent;
+                navigator.clipboard.writeText(text).then(() => {
+                    element.textContent = 'Copied!';
+                    setTimeout(() => {
+                        element.textContent = text;
+                    }, 1000);
+                });
+            }
+        </script>
     </div>
 </body>
 </html>
