@@ -30,29 +30,40 @@
             width: 100%;
             background-color: rgba(0, 0, 0, 0.8);
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            padding: 10px 20px;
+            justify-content: center;
+            padding: 10px 0;
             z-index: 1000;
             backdrop-filter: blur(10px);
         }
         .social-links {
             display: flex;
-            align-items: center;
-            gap: 15px;
+            gap: 10px;
+            margin-bottom: 10px;
         }
         .social-link {
-            color: #4dcd4d;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
+            color: white;
             display: flex;
             align-items: center;
-            gap: 5px;
+            justify-content: center;
         }
-        .social-link:hover {
-            color: #7ddc7d;
+        .telegram {
+            background-color: #0088cc;
+        }
+        .telegram:hover {
+            background-color: #0077aa;
+        }
+        .official-x {
+            background-color: #000;
+        }
+        .official-x:hover {
+            background-color: #222;
         }
         .contract-address {
             background-color: rgba(255, 255, 255, 0.1);
@@ -79,8 +90,8 @@
             border-radius: 20px;
             font-size: 0.9rem;
             font-weight: 600;
+            margin-top: 5px;
         }
-        /* ... (previous CSS remains the same) ... */
         .footer {
             text-align: center;
             padding: 2rem 0;
@@ -102,8 +113,8 @@
     <div class="container">
         <div class="header-tags">
             <div class="social-links">
-                <a href="#" class="social-link">🔗 Telegram</a>
-                <a href="#" class="social-link">🐦 X</a>
+                <a href="https://t.co/GtQz41dPsj" class="social-link telegram">Telegram Group</a>
+                <a href="https://x.com/johncarbong" class="social-link official-x">Official X</a>
             </div>
             <div class="contract-address" onclick="copyToClipboard(this)">
                 CA: D4a6XgKJgru96LcUXU3BtNv8xMa3FbShbi1jDpAqpump
@@ -112,7 +123,7 @@
         </div>
 
         <div class="content-wrapper">
-            <!-- Previous content remains the same -->
+            <!-- Your content here -->
         </div>
 
         <footer class="footer">
