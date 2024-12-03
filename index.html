@@ -4,89 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CARBONG - Crypto Freedom Revolution</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cannabis-green': {
+                            50: '#f0f9f0',
+                            100: '#d7f5d7',
+                            200: '#aeeaae',
+                            300: '#7ddc7d',
+                            400: '#4dcd4d',
+                            500: '#2bb82b',
+                            600: '#1ea01e',
+                            700: '#177c17',
+                            800: '#146214',
+                            900: '#104010'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(135deg, #0a1e0a 0%, #1c4d1c 100%);
+            background: linear-gradient(135deg, #062206 0%, #0a360a 100%);
+            font-family: 'Chakra Petch', sans-serif;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-    <div class="container mx-auto px-4 py-8">
+<body class="bg-black text-white min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
         <!-- Header -->
-        <header class="mb-12 text-center">
-            <h1 class="text-5xl md:text-7xl font-bold text-green-400 uppercase tracking-wide" style="font-family: 'Orbitron', sans-serif;">
+        <header class="text-center mb-16">
+            <div class="bg-cannabis-green-900/30 rounded-full mx-auto mb-6 w-32 h-32 flex items-center justify-center border-4 border-cannabis-green-600">
+                <span class="text-5xl font-bold text-cannabis-green-400">🌿</span>
+            </div>
+            <h1 class="text-6xl font-bold text-cannabis-green-400 mb-4 tracking-tight">
                 CARBONG
-                <span class="text-xl block text-green-200">$CBONG</span>
             </h1>
-            <p class="text-xl md:text-2xl text-green-100 mt-4 max-w-3xl mx-auto">
-                Blending Luxury, Freedom, and Cannabis Culture into a Revolutionary Crypto Experience
+            <p class="text-xl text-cannabis-green-200 max-w-2xl mx-auto">
+                Revolutionizing Crypto with Luxury, Freedom, and Cannabis Culture
             </p>
         </header>
 
         <!-- Key Features -->
         <section class="grid md:grid-cols-3 gap-8 mb-16">
-            <div class="bg-green-900/50 p-6 rounded-xl border-2 border-green-600 transform hover:scale-105 transition-all">
-                <h2 class="text-2xl font-bold text-green-300 mb-4">🚗 Luxury Meets Cannabis</h2>
-                <p class="text-green-100">A bold fusion of high-end lifestyle and blockchain innovation</p>
+            <div class="bg-cannabis-green-900/50 p-6 rounded-xl border border-cannabis-green-700 hover:bg-cannabis-green-900/70 transition-all">
+                <div class="text-4xl mb-4">🚗</div>
+                <h2 class="text-2xl font-bold text-cannabis-green-300 mb-4">Luxury Meets Cannabis</h2>
+                <p class="text-cannabis-green-100">
+                    A bold fusion of high-end lifestyle and blockchain innovation, breaking traditional boundaries.
+                </p>
             </div>
-            <div class="bg-green-900/50 p-6 rounded-xl border-2 border-green-600 transform hover:scale-105 transition-all">
-                <h2 class="text-2xl font-bold text-green-300 mb-4">🔒 Community-Driven</h2>
-                <p class="text-green-100">Powered by passionate enthusiasts seeking ethical crypto growth</p>
+            <div class="bg-cannabis-green-900/50 p-6 rounded-xl border border-cannabis-green-700 hover:bg-cannabis-green-900/70 transition-all">
+                <div class="text-4xl mb-4">👥</div>
+                <h2 class="text-2xl font-bold text-cannabis-green-300 mb-4">Community-Driven</h2>
+                <p class="text-cannabis-green-100">
+                    Powered by passionate enthusiasts seeking ethical growth and shared prosperity.
+                </p>
             </div>
-            <div class="bg-green-900/50 p-6 rounded-xl border-2 border-green-600 transform hover:scale-105 transition-all">
-                <h2 class="text-2xl font-bold text-green-300 mb-4">💸 Innovative Tokenomics</h2>
-                <p class="text-green-100">Sustainable growth model designed for long-term wealth creation</p>
+            <div class="bg-cannabis-green-900/50 p-6 rounded-xl border border-cannabis-green-700 hover:bg-cannabis-green-900/70 transition-all">
+                <div class="text-4xl mb-4">💸</div>
+                <h2 class="text-2xl font-bold text-cannabis-green-300 mb-4">Innovative Tokenomics</h2>
+                <p class="text-cannabis-green-100">
+                    Sustainable economic model designed for long-term value and community empowerment.
+                </p>
             </div>
         </section>
 
         <!-- Token Details -->
-        <section class="bg-green-900/30 rounded-xl p-8 mb-16">
-            <h2 class="text-3xl font-bold text-green-400 mb-6 text-center">Token Insights</h2>
+        <section class="bg-cannabis-green-900/30 rounded-xl p-8 mb-16">
+            <h2 class="text-3xl font-bold text-cannabis-green-400 mb-8 text-center">
+                Token Insights
+            </h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div>
-                    <h3 class="text-xl text-green-300 mb-4">Project Vision</h3>
-                    <p class="text-green-100">
-                        CARBONG represents a paradigm shift in crypto - a token built on principles of freedom, transparency, and community empowerment. With only 0.11% held by the creator, we're redefining fair distribution.
+                    <h3 class="text-xl text-cannabis-green-300 mb-4">Project Vision</h3>
+                    <p class="text-cannabis-green-100 mb-4">
+                        CARBONG represents a paradigm shift in crypto - a token built on principles of freedom, transparency, and community empowerment.
+                    </p>
+                    <p class="text-cannabis-green-200 italic">
+                        "Only 0.11% held by creator - True decentralization in action"
                     </p>
                 </div>
                 <div>
-                    <h3 class="text-xl text-green-300 mb-4">Quick Stats</h3>
-                    <ul class="space-y-2">
-                        <li class="text-green-200">Symbol: CBONG</li>
-                        <li class="text-green-200">Blockchain: Solana</li>
-                        <li class="text-green-200">Creator Allocation: 0.11%</li>
-                        <li class="text-green-200">
-                            <a href="https://gmgn.ai/sol/token/D4a6XgKJgru96LcUXU3BtNv8xMa3FbShbi1jDpAqpump" 
-                               target="_blank" 
-                               class="text-green-400 hover:text-green-200 underline">
-                                View Live Chart & Holders
-                            </a>
+                    <h3 class="text-xl text-cannabis-green-300 mb-4">Token Details</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <span class="mr-2 text-cannabis-green-400">•</span>
+                            <span class="text-cannabis-green-200">Symbol: CBONG</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-cannabis-green-400">•</span>
+                            <span class="text-cannabis-green-200">Blockchain: Solana</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-cannabis-green-400">•</span>
+                            <span class="text-cannabis-green-200">Creator Allocation: 0.11%</span>
                         </li>
                     </ul>
+                    <div class="mt-6">
+                        <a href="https://gmgn.ai/sol/token/D4a6XgKJgru96LcUXU3BtNv8xMa3FbShbi1jDpAqpump" 
+                           target="_blank" 
+                           class="bg-cannabis-green-600 hover:bg-cannabis-green-500 text-white px-4 py-2 rounded-full inline-block transition-colors">
+                            View Live Chart & Holders
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Community Links -->
         <section class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-green-400 mb-6">Join the CARBONG Revolution</h2>
+            <h2 class="text-3xl font-bold text-cannabis-green-400 mb-8">
+                Join the CARBONG Revolution
+            </h2>
             <div class="flex justify-center space-x-4">
-                <a href="https://t.co/GtQz41dPsj" target="_blank" class="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-full">
-                    Telegram
+                <a href="https://t.co/GtQz41dPsj" 
+                   target="_blank" 
+                   class="bg-cannabis-green-700 hover:bg-cannabis-green-600 text-white px-6 py-3 rounded-full flex items-center space-x-2 transition-colors">
+                    <span>Telegram</span>
                 </a>
-                <a href="https://twitter.com/johncarbong" target="_blank" class="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-full">
-                    Twitter/X
+                <a href="https://twitter.com/johncarbong" 
+                   target="_blank" 
+                   class="bg-cannabis-green-700 hover:bg-cannabis-green-600 text-white px-6 py-3 rounded-full flex items-center space-x-2 transition-colors">
+                    <span>Twitter/X</span>
                 </a>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="text-center text-green-300 pt-8 border-t border-green-800">
-            <p>Created with 🌿 by JOHN CARBONG</p>
-            <p class="text-sm mt-2">© 2024 CARBONG. Chill with Bong.</p>
+        <footer class="text-center pt-8 border-t border-cannabis-green-800">
+            <p class="text-cannabis-green-300 mb-2">
+                Created with 🌿 by JOHN CARBONG
+            </p>
+            <p class="text-sm text-cannabis-green-600">
+                © 2024 CARBONG. Chill with Bong.
+            </p>
         </footer>
     </div>
 </body>
