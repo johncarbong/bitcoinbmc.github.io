@@ -4,67 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CARBONG - Cannabis Crypto Revolution</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
     <style>
-        /* General Styles */
+        :root {
+            --primary-green: #4dcd4d;
+            --dark-green: #0a1a0a;
+            --light-green: #7ddc7d;
+            --text-color: #e0e0e0;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
+
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0a1a0a, #121212);
-            color: #e0e0e0;
+            background: linear-gradient(135deg, var(--dark-green), #121212);
+            color: var(--text-color);
             line-height: 1.6;
+            overflow-x: hidden;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /* Header Styles */
+        /* Header Optimization */
         .header-tags {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.9);
             padding: 10px 20px;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
+            backdrop-filter: blur(10px);
         }
+
         .social-link {
             text-decoration: none;
             padding: 10px 20px;
             border-radius: 5px;
             font-weight: bold;
             color: white;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
+
+        .social-link svg {
+            width: 24px;
+            height: 24px;
+        }
+
         .telegram {
             background-color: #0088cc;
         }
+
         .telegram:hover {
             background-color: #006699;
+            transform: scale(1.05);
         }
+
         .official-x {
             background-color: #000;
         }
+
         .official-x:hover {
             background-color: #333;
+            transform: scale(1.05);
         }
 
-        /* Hero Section */
+        /* Hero Section with 3D Effect */
         .hero {
             text-align: center;
             margin-top: 100px;
+            perspective: 1000px;
         }
+
         .header-logo {
-            background: linear-gradient(135deg, #4dcd4d, #1ea01e);
+            background: linear-gradient(135deg, var(--primary-green), #1ea01e);
             border-radius: 50%;
             width: 120px;
             height: 120px;
@@ -73,40 +102,65 @@
             justify-content: center;
             margin: 0 auto 20px;
             box-shadow: 0 10px 25px rgba(77, 205, 77, 0.3);
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
         }
+
+        .header-logo:hover {
+            transform: rotateY(180deg);
+        }
+
+        .header-logo span {
+            font-size: 3rem;
+            backface-visibility: hidden;
+        }
+
         .title {
             font-size: 3rem;
             font-weight: bold;
-            color: #4dcd4d;
+            color: var(--primary-green);
+            text-shadow: 2px 2px 4px rgba(77, 205, 77, 0.5);
         }
+
         .subtitle {
             font-size: 1.2rem;
-            color: #7ddc7d;
+            color: var(--light-green);
             margin-top: 10px;
+            letter-spacing: 1px;
         }
 
         /* Contract Section */
         .contract-chain {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             margin: 20px 0;
+            gap: 10px;
         }
+
         .contract-label {
             font-weight: bold;
             margin-right: 10px;
         }
+
         .contract-address {
             background-color: rgba(255, 255, 255, 0.1);
-            color: #4dcd4d;
+            color: var(--primary-green);
             padding: 10px 20px;
             border-radius: 20px;
             font-weight: bold;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
+
+        .contract-address:hover {
+            background-color: rgba(77, 205, 77, 0.2);
+        }
+
         .chain-tag {
-            background-color: #4dcd4d;
-            color: #0a1a0a;
+            background-color: var(--primary-green);
+            color: var(--dark-green);
             padding: 10px 20px;
             border-radius: 20px;
             margin-left: 20px;
@@ -120,26 +174,36 @@
             justify-content: center;
             margin-top: 40px;
         }
+
         .feature-card {
             background-color: rgba(11, 61, 11, 0.5);
-            border: 2px solid #4dcd4d;
+            border: 2px solid var(--primary-green);
             border-radius: 15px;
             padding: 20px;
             flex: 0 1 30%;
             text-align: center;
+            transition: transform 0.3s ease;
         }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(77, 205, 77, 0.2);
+        }
+
         .feature-icon {
             font-size: 2.5rem;
             margin-bottom: 10px;
         }
+
         .feature-title {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #4dcd4d;
+            color: var(--primary-green);
             margin-bottom: 10px;
         }
+
         .feature-description {
-            color: #e0e0e0;
+            color: var(--text-color);
         }
 
         /* Roadmap Section */
@@ -150,15 +214,17 @@
             background-color: rgba(11, 61, 11, 0.5);
             border-radius: 15px;
         }
+
         .roadmap-title {
             font-size: 2rem;
             font-weight: bold;
-            color: #4dcd4d;
+            color: var(--primary-green);
             margin-bottom: 20px;
         }
+
         .roadmap-content {
             font-size: 1rem;
-            color: #e0e0e0;
+            color: var(--text-color);
             line-height: 1.8;
             margin-bottom: 20px;
         }
@@ -171,19 +237,81 @@
             background-color: rgba(11, 61, 11, 0.5);
             border-radius: 10px;
         }
+
+        /* Responsive Typography and Layout */
+        @media (max-width: 768px) {
+            .header-tags {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .features {
+                flex-direction: column;
+            }
+
+            .feature-card {
+                flex: 0 1 100%;
+            }
+
+            .contract-chain {
+                flex-direction: column;
+            }
+        }
+
+        /* Cannabis-themed Decorative SVG Background */
+        .cannabis-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
+    <!-- Cannabis Decorative Background -->
+    <svg class="cannabis-background" viewBox="0 0 1440 810" xmlns="http://www.w3.org/2000/svg">
+        <path d="M720 405 Q900 200 1080 405 T1440 405" fill="none" stroke="#4dcd4d" stroke-opacity="0.1" stroke-width="2"/>
+        <path d="M0 405 Q180 600 360 405 T720 405" fill="none" stroke="#4dcd4d" stroke-opacity="0.1" stroke-width="2"/>
+        <g fill="#4dcd4d" fill-opacity="0.05">
+            <circle cx="200" cy="200" r="50"/>
+            <circle cx="1240" cy="600" r="40"/>
+            <circle cx="100" cy="700" r="30"/>
+            <circle cx="1340" cy="150" r="35"/>
+        </g>
+    </svg>
+
     <!-- Header -->
     <div class="header-tags">
-        <a href="https://t.co/GtQz41dPsj" class="social-link telegram">Telegram Group</a>
-        <a href="https://x.com/johncarbong" class="social-link official-x">Official X</a>
+        <a href="https://t.co/GtQz41dPsj" target="_blank" class="social-link telegram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.494 9.098c.264-2.617-1.02-4.1-2.762-4.098-.881 0-1.711.509-2.208 1.31-.497-.801-1.327-1.31-2.208-1.31-1.742-.002-3.026 1.481-2.762 4.098.181 1.805.485 3.031 2.762 4.902 2.277-1.871 2.581-3.097 2.762-4.902z"/>
+            </svg>
+            Telegram Group
+        </a>
+        <a href="https://x.com/johncarbong" target="_blank" class="social-link official-x">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+            </svg>
+            Official X
+        </a>
     </div>
 
     <!-- Hero Section -->
     <div class="hero">
         <div class="header-logo">
-            <span style="font-size: 3rem;">🌿</span>
+            <span>🌿</span>
         </div>
         <h1 class="title">CARBONG</h1>
         <p class="subtitle">The Ultimate Cannabis Culture Crypto - Bridging Blockchain and Green Lifestyle</p>
