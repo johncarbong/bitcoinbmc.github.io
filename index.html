@@ -3,94 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARBONG - Cannabis Crypto Revolution</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>Carbong - Cannabis Culture Crypto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
+        /* พื้นฐานสไตล์ */
         body {
-            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #121212;
+            font-family: 'Press Start 2P', cursive; /* ฟอนต์สไตล์เรโทร */
+            background-color: #004d00; /* เขียวเข้มแบบกัญชา */
             color: #ffffff;
-            line-height: 1.6;
+            overflow-x: hidden;
         }
-        a {
-            color: #4dcd4d;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        a:hover {
-            color: #7ddc7d;
-        }
+
         header {
-            background-color: rgba(0, 0, 0, 0.8);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background: linear-gradient(90deg, #003300, #228B22, #003300); /* แถบสีเขียวไล่ระดับ */
+            color: #ffdd00; /* สีเหลืองทอง */
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 1.5rem;
+            border-bottom: 3px solid #228B22;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+
         .hero {
             text-align: center;
-            margin-top: 60px;
+            padding: 60px 20px;
         }
+
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: #4dcd4d;
+            font-size: 3rem;
+            color: #ffdd00; /* ตัวหนังสือสีเหลืองทอง */
+            text-shadow: 3px 3px #228B22; /* เงาสีเขียว */
         }
+
         .hero p {
             font-size: 1.2rem;
-            color: #cccccc;
+            color: #e0e0e0;
+            margin-top: 20px;
         }
-        .section {
-            margin: 40px 0;
-            text-align: center;
-        }
-        .section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            color: #4dcd4d;
-        }
-        .section p {
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
             font-size: 1rem;
-            color: #cccccc;
+            color: #004d00;
+            background: #ffdd00;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 3px 3px #228B22;
         }
+
+        .button:hover {
+            background: #e5be00;
+            transform: scale(1.05);
+        }
+
         .features {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
             justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            background: #003300;
+            border-top: 5px solid #228B22;
         }
+
         .feature {
-            background-color: #1a1a1a;
+            width: 250px;
+            background: #228B22;
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            flex: 1;
-            min-width: 200px;
-            border: 1px solid rgba(77, 205, 77, 0.2);
+            color: #ffdd00;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
         }
+
+        .feature h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 0.9rem;
+            color: #e5e5e5;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
+            background: #003300;
+            color: #ffdd00;
             font-size: 0.9rem;
-            color: #999999;
+            border-top: 3px solid #228B22;
         }
+
+        /* สไตล์พิเศษสำหรับอุปกรณ์เล็ก */
         @media (max-width: 600px) {
             .hero h1 {
                 font-size: 2rem;
             }
-            .hero p {
-                font-size: 1rem;
-            }
+
             .features {
                 flex-direction: column;
             }
@@ -98,74 +115,37 @@
     </style>
 </head>
 <body>
+    <!-- ส่วนหัว -->
     <header>
-        <a href="https://t.co/GtQz41dPsj" target="_blank">Telegram</a>
-        <a href="https://x.com/johncarbong" target="_blank">Official X</a>
+        🌿 Welcome to Carbong - Cannabis Crypto 🌿
     </header>
 
-    <div class="container">
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>CARBONG</h1>
-            <p>The Ultimate Cannabis Culture Crypto</p>
-        </section>
+    <!-- ส่วนเด่น -->
+    <section class="hero">
+        <h1>Carbong</h1>
+        <p>Your gateway to the cannabis crypto revolution.</p>
+        <a href="#" class="button">Join the Movement</a>
+    </section>
 
-        <!-- Contract Section -->
-        <section class="section">
-            <h2>Contract Address</h2>
-            <p>
-                <span id="contract-address" 
-                      onclick="copyToClipboard()" 
-                      style="cursor: pointer; color: #4dcd4d; text-decoration: underline;">
-                    D4a6XgKJgru96LcUXU3BtNv8xMa3FbShbi1jDpAqpump
-                </span>
-            </p>
-            <p style="font-size: 0.9rem; color: #999999;">Solana Chain</p>
-        </section>
+    <!-- จุดเด่น -->
+    <section class="features">
+        <div class="feature">
+            <h3>🚀 Decentralized Power</h3>
+            <p>Empowering communities to grow together.</p>
+        </div>
+        <div class="feature">
+            <h3>🌿 Green Payments</h3>
+            <p>Fast, secure, and eco-friendly transactions.</p>
+        </div>
+        <div class="feature">
+            <h3>🔥 Retro Vibes</h3>
+            <p>Celebrating cannabis culture, 90s style.</p>
+        </div>
+    </section>
 
-        <!-- Features -->
-        <section class="section">
-            <h2>Features</h2>
-            <div class="features">
-                <div class="feature">
-                    <h3>🚗 Organic Growth</h3>
-                    <p>No marketing needed, just pure community-driven growth.</p>
-                </div>
-                <div class="feature">
-                    <h3>🌿 Chill Payments</h3>
-                    <p>Enjoy your moments and pay seamlessly with CBONG tokens.</p>
-                </div>
-                <div class="feature">
-                    <h3>👥 Stronger Community</h3>
-                    <p>Empowering users to define the future of CARBONG together.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Vision Section -->
-        <section class="section">
-            <h2>Our Vision</h2>
-            <p>
-                At CARBONG, we believe in the power of community to shape the future. Our roadmap is focused on creating 
-                a collaborative environment where every voice matters. Together, we will build a decentralized platform 
-                that reflects the shared goals and aspirations of our members.
-            </p>
-        </section>
-    </div>
-
+    <!-- ส่วนท้าย -->
     <footer>
-        <p>Created by John Carbong</p>
+        &copy; 2024 Carbong. Keeping it green and clean.
     </footer>
-
-    <script>
-        function copyToClipboard() {
-            const contractAddress = document.getElementById('contract-address').textContent;
-            navigator.clipboard.writeText(contractAddress).then(() => {
-                alert('Contract address copied to clipboard!');
-            }).catch(err => {
-                console.error('Failed to copy:', err);
-            });
-        }
-    </script>
 </body>
 </html>
