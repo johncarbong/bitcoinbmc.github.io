@@ -3,64 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carbong - Cannabis Culture Crypto</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Carbong - Cannabis Crypto</title>
     <style>
-        /* พื้นฐานสไตล์ */
+        /* พื้นฐานสไตล์ยุค 2000 */
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Press Start 2P', cursive; /* ฟอนต์สไตล์เรโทร */
-            background-color: #004d00; /* เขียวเข้มแบบกัญชา */
-            color: #ffffff;
-            overflow-x: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #002800; /* สีเขียวเข้ม */
+            color: #ffffff; /* สีขาว */
         }
 
         header {
-            background: linear-gradient(90deg, #003300, #228B22, #003300); /* แถบสีเขียวไล่ระดับ */
-            color: #ffdd00; /* สีเหลืองทอง */
-            padding: 15px 20px;
+            background-color: #004d00; /* เขียวเข้ม */
+            padding: 15px;
             text-align: center;
-            font-size: 1.5rem;
-            border-bottom: 3px solid #228B22;
+            color: #ffcc00; /* เหลืองทอง */
+            font-size: 24px;
+            border-bottom: 3px solid #228B22; /* เส้นขอบล่าง */
+        }
+
+        nav {
+            background-color: #003300; /* สีเข้มสำหรับเมนู */
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #004d00;
+        }
+
+        nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #ffdd55; /* สีไฮไลต์ */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
         }
 
         .hero {
-            text-align: center;
-            padding: 60px 20px;
+            background-color: #004d00;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            border: 1px solid #228B22;
         }
 
         .hero h1 {
-            font-size: 3rem;
-            color: #ffdd00; /* ตัวหนังสือสีเหลืองทอง */
-            text-shadow: 3px 3px #228B22; /* เงาสีเขียว */
+            font-size: 36px;
+            color: #ffcc00;
+            margin: 10px 0;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            color: #e0e0e0;
-            margin-top: 20px;
+            font-size: 16px;
+            color: #e5e5e5;
         }
 
         .button {
             display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            font-size: 1rem;
+            padding: 10px 20px;
+            margin: 10px 0;
             color: #004d00;
-            background: #ffdd00;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-transform: uppercase;
+            background-color: #ffcc00;
             text-decoration: none;
             font-weight: bold;
-            box-shadow: 3px 3px #228B22;
+            border-radius: 5px;
         }
 
         .button:hover {
-            background: #e5be00;
-            transform: scale(1.05);
+            background-color: #ffdd55;
         }
 
         .features {
@@ -68,84 +86,86 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            padding: 40px 20px;
-            background: #003300;
-            border-top: 5px solid #228B22;
         }
 
         .feature {
-            width: 250px;
-            background: #228B22;
+            background-color: #003300;
+            color: #ffffff;
             padding: 20px;
+            border: 1px solid #228B22;
+            width: 200px;
             border-radius: 10px;
             text-align: center;
-            color: #ffdd00;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .feature h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .feature p {
-            font-size: 0.9rem;
-            color: #e5e5e5;
         }
 
         footer {
-            text-align: center;
+            background-color: #002800;
             padding: 20px;
-            background: #003300;
-            color: #ffdd00;
-            font-size: 0.9rem;
-            border-top: 3px solid #228B22;
+            text-align: center;
+            color: #cccccc;
+            font-size: 14px;
+            border-top: 3px solid #004d00;
         }
 
-        /* สไตล์พิเศษสำหรับอุปกรณ์เล็ก */
-        @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .features {
-                flex-direction: column;
-            }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <!-- ส่วนหัว -->
     <header>
-        🌿 Welcome to Carbong - Cannabis Crypto 🌿
+        🌿 Carbong - The Ultimate Cannabis Culture Crypto 🌿
     </header>
 
-    <!-- ส่วนเด่น -->
-    <section class="hero">
-        <h1>Carbong</h1>
-        <p>Your gateway to the cannabis crypto revolution.</p>
-        <a href="#" class="button">Join the Movement</a>
-    </section>
+    <!-- เมนูนำทาง -->
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    <!-- จุดเด่น -->
-    <section class="features">
-        <div class="feature">
-            <h3>🚀 Decentralized Power</h3>
-            <p>Empowering communities to grow together.</p>
-        </div>
-        <div class="feature">
-            <h3>🌿 Green Payments</h3>
-            <p>Fast, secure, and eco-friendly transactions.</p>
-        </div>
-        <div class="feature">
-            <h3>🔥 Retro Vibes</h3>
-            <p>Celebrating cannabis culture, 90s style.</p>
-        </div>
-    </section>
+    <!-- ส่วนเนื้อหาหลัก -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <h1>Carbong</h1>
+            <p>Your gateway to the future of cannabis and crypto.</p>
+            <a href="https://telegram.org" target="_blank" class="button">Join Telegram</a>
+            <a href="#" target="_blank" class="button">Official X</a>
+        </section>
+
+        <!-- Features -->
+        <section id="features">
+            <div class="features">
+                <div class="feature">
+                    <h3>🌿 Organic Growth</h3>
+                    <p>No marketing needed. Pure community-driven power.</p>
+                </div>
+                <div class="feature">
+                    <h3>🚀 Fast Transactions</h3>
+                    <p>Experience the speed of Solana blockchain.</p>
+                </div>
+                <div class="feature">
+                    <h3>🔒 Secure Payments</h3>
+                    <p>Reliable and decentralized payment solutions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section id="contact" class="hero">
+            <h2>Contact & Contract</h2>
+            <p>CA (Contract Address): <span style="color: #ffcc00;">D4a6XgKJgru96LcUXU3BtNv8xMa3FbShbi1jDpAqpump</span></p>
+            <p>Join our community on Telegram or follow us on Official X!</p>
+        </section>
+    </div>
 
     <!-- ส่วนท้าย -->
     <footer>
-        &copy; 2024 Carbong. Keeping it green and clean.
+        &copy; 2024 Carbong. Keeping the culture green and thriving. <br>
+        Designed by <a href="#">Carbong Devs</a>.
     </footer>
 </body>
 </html>
